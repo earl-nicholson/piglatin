@@ -52,4 +52,4 @@ To get started, find the `myPigLatinCodeHere` function, and write your code. Eve
 - As a developer, I have well written README file with instructions on how to access my repository.
 - As a developer, my variables are all named semantically.
 - As a developer, I have refactored and efficient code.
-- As a developer, I have my application deployed as a live website.
+- As a developer, I have my application [deployed as a live website](https://www.netlify.com/).
