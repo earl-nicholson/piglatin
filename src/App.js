@@ -35,7 +35,19 @@ class App extends Component {
 
       // your code here!
 
-      // Remember: console.log is your friend :)
+      // qu
+      if (currentWord.includes('qu') === true) {
+        return currentWord.slice(currentWord.indexOf('u')+1) + currentWord.slice(0,currentWord.indexOf('u')+1) + 'ay'
+// vowel
+      } else if (currentWord[0] === 'a' || currentWord[0] === 'e' || currentWord[0] === 'i' || currentWord[0] === 'o' || currentWord[0] === 'u') {
+        return currentWord + 'way'
+// y
+      } else if (currentWord.includes('y') && currentWord.includes('a') === false && currentWord.includes('e') === false && currentWord.includes('i') === false && currentWord.includes('o') === false && currentWord.includes('u') === false) {
+        return currentWord.slice(currentWord.indexOf('y')) + currentWord.slice(0,currentWord.indexOf('y')) + 'ay'
+// con
+      } else if (currentWord[0] !== 'a' || currentWord[0] !== 'e' || currentWord[0] !== 'i' || currentWord[0] !== 'o' || currentWord[0] !== 'u') {
+        return currentWord.slice(currentWord.indexOf(vowelsArray[0])) + currentWord.slice(0,currentWord.indexOf(vowelsArray[0])) + 'ay'
+      }
 
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
@@ -99,7 +111,7 @@ class App extends Component {
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by Earl Nicholson</footer>
       </>
     )
   }
