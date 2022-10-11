@@ -20,7 +20,7 @@ class App extends Component {
   myPigLatinCodeHere = () => {
     // the variable "userInput" will contain the text input from the user modified into an array of words
     // no need to change this variable
-    let userInput = this.state.phrase.split(" ")
+    let userInput = this.state.phrase.toLowerCase().split(" ")
     console.log("userInput:", userInput)
 
     // now that we have an array of words, we can map over the array and access each word
